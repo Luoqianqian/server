@@ -1,6 +1,6 @@
-const pool = require('../config/db');
+import pool from '../config/db.js';
 
-module.exports = {
+export default {
   getAllUsers: async () => {
     const [rows] = await pool.query('SELECT * FROM users');
     return rows;

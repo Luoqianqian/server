@@ -1,12 +1,12 @@
-const express = require('express')
-const bodyParser = require('body-parser');
-const mysql = require('./config/db')
-const userRoutes = require('./routes/userRoutes');
-const productRoutes = require('./routes/productRoutes');
-const orderRoutes = require('./routes/orderRoutes');
-const postsRoutes = require('./routes/postsRoutes');
-const adminUserRoutes = require('./routes/adminUserRoutes'); 
-require('dotenv').config()
+import express from 'express';
+import bodyParser from 'body-parser';
+import userRoutes from './routes/userRoutes.js';
+import productRoutes from './routes/productRoutes.js';
+import orderRoutes from './routes/orderRoutes.js';
+import postsRoutes from './routes/postsRoutes.js';
+import adminUserRoutes from './routes/adminRoutes.js'; 
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express()
 const PORT = process.env.PORT || 5000;

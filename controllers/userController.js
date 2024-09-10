@@ -1,6 +1,6 @@
-const userModel = require('../models/userModel');
+import userModel from '../models/userModel.js';
 
-module.exports = {
+export default {
   getAllUsers: async (req, res) => {
     try {
       const users = await userModel.getAllUsers();

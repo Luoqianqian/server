@@ -1,7 +1,6 @@
-// models/adminUserModel.js
-const pool = require('../config/db');
+import pool from '../config/db.js';
 
-module.exports = {
+export default {
   getAllAdminUsers: async () => {
     const [rows] = await pool.query('SELECT * FROM admin_users');
     return rows;
